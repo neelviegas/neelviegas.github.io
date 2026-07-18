@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Neel Viegas</title>
+<meta name="description" content="Curriculum vitae of Neel Viegas — mechanical engineering student, Pratt & Whitney Canada intern, McGill Rocket Team injector co-lead.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">NEEL&nbsp;VIEGAS <span class="tag">MECH ENG</span></div>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
+    <div class="nav-links" id="nl">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Detailed Projects</a>
+      <a href="cv.html" class="active">CV</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding:52px 0 24px;">
+  <div class="wrap">
+    <div class="eyebrow">Curriculum Vitae</div>
+    <h1 style="font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:18px;">Neel Viegas</h1>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="media/Other/CV_Neel_Viegas.pdf" target="_blank" rel="noopener">Open / Download PDF &darr;</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" style="padding-bottom:56px;">
+  <div class="pdf-frame">
+    <object data="media/Other/CV_Neel_Viegas.pdf#view=FitH" type="application/pdf">
+      <iframe src="media/Other/CV_Neel_Viegas.pdf#view=FitH" title="CV PDF preview"></iframe>
+      <p style="padding:20px;font-family:var(--font-mono);font-size:0.85rem;">
+        Your browser can't display the PDF inline.
+        <a href="media/Other/CV_Neel_Viegas.pdf" target="_blank" rel="noopener">Open it in a new tab &rarr;</a>
+      </p>
+    </object>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="row">
+      <div>© <span id="yr"></span> Neel Viegas · Montréal, QC</div>
+      <div>
+        <a href="mailto:neelviegas@gmail.com">neelviegas@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/neel-viegas-375a89242" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
