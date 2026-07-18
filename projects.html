@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detailed Projects — Neel Viegas</title>
+<meta name="description" content="Detailed engineering writeups: thrust analysis tooling, vortex injector redesign, automatic curtains, a local AI model, and an assisted-seating chair.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">NEEL&nbsp;VIEGAS <span class="tag">MECH ENG</span></div>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
+    <div class="nav-links" id="nl">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Detailed Projects</a>
+      <a href="cv.html">CV</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:40px;">
+  <div class="wrap">
+    <div class="eyebrow">Detailed Project View</div>
+    <h1 style="font-size:clamp(2.2rem,5vw,3.4rem);">The work, in depth.</h1>
+    <p class="lede">Writeups, drawings, and test data behind each project — the reasoning as much as the result.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ THRUST ANALYSIS ============ -->
+  <section class="proj" id="thrust">
+    <div class="proj-head">
+      <span class="num">01</span>
+      <h2>Thrust Analysis Tool</h2>
+      <span class="badge">McGill Rocket Team</span>
+    </div>
+    <div class="proj-meta">
+      <span><b>Role:</b> Injector team lead</span>
+      <span><b>Stack:</b> Python · Matplotlib · NumPy</span>
+      <span><b>Timeline:</b> May 2026 – present</span>
+    </div>
+    <div class="proj-body">
+      <div class="text">
+        <p>I lead this project as the lead of the injector team on the McGill Rocket Team. The goal
+           was to extract the coefficient of combustion efficiency from our hotfire data.</p>
+        <p>I built the tool in Python using Matplotlib. It ingests raw test-stand telemetry from a
+           hybrid hotfire and turns it into a clean, four-panel analysis: oxidizer mass flow rate
+           (via the Dyer model), run vs. chamber pressure with the pressure differential that drives
+           flow, run temperature, and cumulative oxidizer mass consumed.</p>
+        <p>Handling the messy realities of test data — like substituting a faulted thermocouple
+           (tc4 in for tc5) — was part of making the output trustworthy enough to feed downstream
+           efficiency calculations.</p>
+        <div class="callout">
+          <div class="k">Result — HF1.1</div>
+          Total oxidizer 11.70&nbsp;kg · peak 1.86&nbsp;kg/s · average 1.69&nbsp;kg/s.
+        </div>
+      </div>
+      <div class="proj-media">
+        <figure>
+          <img src="media/Thrust%20Analysis/massflowrate%20data.png" alt="HF1.1 four-panel oxidizer mass flow analysis">
+          <figcaption>FIG 1 — HF1.1 oxidizer mass flow analysis (Dyer model, tc4 run temp).</figcaption>
+        </figure>
+        <figure>
+          <img src="media/Thrust%20Analysis/upright%20graphs.png" alt="Upright thrust and pressure graphs from the analysis tool">
+          <figcaption>FIG 2 — Run/chamber pressure &amp; thrust curves.</figcaption>
+        </figure>
+        <figure>
+          <img src="media/Other/Test%20Stand%20Hotfire%20pic.JPEG" alt="Hybrid rocket hotfire on the test stand">
+          <figcaption>FIG 3 — Test-stand hotfire.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VORTEX INJECTOR ============ -->
+  <section class="proj" id="injector">
+    <div class="proj-head">
+      <span class="num">02</span>
+      <h2>Vortex Injector Redesign</h2>
+      <span class="badge">McGill Rocket Team</span>
+    </div>
+    <div class="proj-meta">
+      <span><b>Role:</b> Injector project (member → co-lead)</span>
+      <span><b>Stack:</b> Siemens NX · GD&amp;T</span>
+      <span><b>Timeline:</b> Aug 2025 – May 2026</span>
+    </div>
+    <div class="proj-body">
+      <div class="text">
+        <p>In response to a growing body of research advocating for vortex injector hole angles
+           closer to 45&nbsp;degrees, I was tasked with updating our bench-scale and full-scale
+           vortex injectors to optimize oxidizer–fuel mixing in our hybrid rocket propulsion system.</p>
+        <p>I presented my research to the team, then redesigned both injectors in NX and produced
+           new manufacturing drawings — including the full GD&amp;T, sections, and detail views needed
+           to actually make the parts.</p>
+        <ul class="tight">
+          <li>Researched and justified the ~45° hole-angle change against prior geometry.</li>
+          <li>Rebuilt the bench-scale and full-scale injector CAD in Siemens NX.</li>
+          <li>Authored new drawings with tolerances, seal callouts, and detail scales.</li>
+        </ul>
+      </div>
+      <div class="proj-media">
+        <figure>
+          <img src="media/Injector%20Redesign/benchscale.png" alt="Bench-scale vortex injector drawing">
+          <figcaption>FIG 1 — Bench-scale vortex injector drawing.</figcaption>
+        </figure>
+        <figure>
+          <img src="media/Injector%20Redesign/fullscale.png" alt="Full-scale vortex injector drawing">
+          <figcaption>FIG 2 — Full-scale vortex injector drawing.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTOMATIC CURTAINS ============ -->
+  <section class="proj" id="curtains">
+    <div class="proj-head">
+      <span class="num">03</span>
+      <h2>Automatic Curtains</h2>
+      <span class="badge">Personal Project</span>
+    </div>
+    <div class="proj-meta">
+      <span><b>Role:</b> Solo — design, CAD, circuit, code</span>
+      <span><b>Stack:</b> SolidWorks · Arduino UNO · 3D print</span>
+      <span><b>Timeline:</b> Jun 2026 – present</span>
+    </div>
+    <div class="proj-body">
+      <div class="text">
+        <p>I live next to a building whose lights, unfortunately for me, never turn off. That said,
+           I like waking up to the sun without compromising my sleep. This led me to build automatic
+           curtains.</p>
+        <p>I designed the circuit and wrote a script on an Arduino UNO that closes my curtains at
+           night and opens them in the morning. Then I designed a gear train and supports for the
+           circuit and the servo in SolidWorks. I assembled everything — and can now sleep in peace.</p>
+        <ul class="tight">
+          <li>Designed the drive gears and servo/electronics mounts in SolidWorks, then 3D printed them.</li>
+          <li>Built the circuit around an Arduino UNO with a timed open/close routine.</li>
+          <li>Iterated on the gear set until the torque and fit were right.</li>
+        </ul>
+      </div>
+      <div class="proj-media">
+        <div class="gallery">
+          <figure>
+            <img src="media/Curtain%20Project/curcuit.jpg" alt="Arduino circuit for the automatic curtains">
+            <figcaption>FIG 1 — Arduino UNO circuit.</figcaption>
+          </figure>
+          <figure>
+            <img src="media/Curtain%20Project/prototypes.jpg" alt="3D-printed gear prototypes">
+            <figcaption>FIG 2 — Iterated gear prototypes.</figcaption>
+          </figure>
+          <figure>
+            <img src="media/Curtain%20Project/fully%20assembled.jpg" alt="Fully assembled curtain drive installed">
+            <figcaption>FIG 3 — Fully assembled &amp; installed.</figcaption>
+          </figure>
+          <figure>
+            <img src="media/Curtain%20Project/fully%20assembled%20(from%20top).jpg" alt="Top view of the assembled curtain drive">
+            <figcaption>FIG 4 — Drive mechanism, top view.</figcaption>
+          </figure>
+          <figure style="grid-column:1 / -1;">
+            <video controls preload="none" playsinline style="width:100%;border:1px solid var(--line);border-radius:4px;background:#000;">
+              <source src="media/Curtain%20Project/working%20vid.mp4" type="video/mp4">
+            </video>
+            <figcaption>FIG 5 — Working open/close demo.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOCAL AI MODEL ============ -->
+  <section class="proj" id="ai">
+    <div class="proj-head">
+      <span class="num">04</span>
+      <h2>Local AI Model</h2>
+      <span class="badge">Personal Project</span>
+    </div>
+    <div class="proj-meta">
+      <span><b>Role:</b> Solo</span>
+      <span><b>Stack:</b> Python · Open-source LLMs · RAG</span>
+      <span><b>Timeline:</b> Jun 2026 – present</span>
+    </div>
+    <div class="proj-body">
+      <div class="text">
+        <p>Inspired by work I did at Pratt &amp; Whitney, I built a locally-run retrieval-augmented
+           generation (RAG) system using open-source AI models.</p>
+        <p>The focus was tuning the parameters for an ideal pipeline: indexing → retrieval →
+           augmentation &amp; generation — so that a fully local model could answer questions
+           accurately over a private document set.</p>
+        <ul class="tight">
+          <li>Ran open-source models entirely locally (no external API).</li>
+          <li>Tested indexing and retrieval parameters for accuracy and speed.</li>
+          <li>Tuned the augmentation + generation stage for grounded answers.</li>
+        </ul>
+      </div>
+      <div class="proj-media">
+        <figure>
+          <div class="ph" style="aspect-ratio:16/10;"><span class="ico">◈</span><span class="lbl">Pipeline / demo</span><span class="path">media/Other/ai_pipeline.png</span></div>
+          <figcaption>FIG 1 — RAG pipeline (drop in a diagram or screenshot).</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHAIR ============ -->
+  <section class="proj" id="chair">
+    <div class="proj-head">
+      <span class="num">05</span>
+      <h2>Chair with Assisted Seating &amp; Standing</h2>
+      <span class="badge">MECH 292</span>
+    </div>
+    <div class="proj-meta">
+      <span><b>Role:</b> CAD (solo) · circuit &amp; presentation (team of 5)</span>
+      <span><b>Stack:</b> Siemens NX · Circuit</span>
+      <span><b>Timeline:</b> Jan 2026 – May 2026</span>
+    </div>
+    <div class="proj-body">
+      <div class="text">
+        <p>This was my first ever time CADing in NX — for MECH 292, our design class, in a team of five.</p>
+        <p>The chair uses an assist mechanism to help a user sit down and stand up. I CADed the entire
+           assembly on my own, and the team designed and assembled a supporting circuit. We presented
+           the project to the class and answered design questions.</p>
+        <ul class="tight">
+          <li>Modelled the full chair assembly in Siemens NX (solo).</li>
+          <li>Contributed to the assist-mechanism circuit (team).</li>
+          <li>Presented and defended the design to the class (team).</li>
+        </ul>
+      </div>
+      <div class="proj-media">
+        <div class="gallery g3">
+          <figure>
+            <img src="media/Chair%20Project/chair_assembly.jpeg" alt="NX assembly render of the chair">
+            <figcaption>FIG 1 — NX assembly.</figcaption>
+          </figure>
+          <figure>
+            <video controls preload="none" playsinline style="width:100%;border:1px solid var(--line);border-radius:4px;background:#000;">
+              <source src="media/Chair%20Project/Final_seat_piston_vid.mp4" type="video/mp4">
+            </video>
+            <figcaption>FIG 2 — Seat-assist motion.</figcaption>
+          </figure>
+          <figure>
+            <video controls preload="none" playsinline style="width:100%;border:1px solid var(--line);border-radius:4px;background:#000;">
+              <source src="media/Chair%20Project/Final_armrests_video.mp4" type="video/mp4">
+            </video>
+            <figcaption>FIG 3 — Armrest assist.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="row">
+      <div>© <span id="yr"></span> Neel Viegas · Montréal, QC</div>
+      <div>
+        <a href="mailto:neelviegas@gmail.com">neelviegas@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/neel-viegas-375a89242" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="cv.html">CV</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

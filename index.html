@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neel Viegas — Mechanical Engineering Portfolio</title>
+<meta name="description" content="Mechanical engineering portfolio of Neel Viegas — rocket propulsion, CAD, data tooling, and hardware projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">NEEL&nbsp;VIEGAS <span class="tag">MECH ENG</span></div>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
+    <div class="nav-links" id="nl">
+      <a href="index.html" class="active">Home</a>
+      <a href="projects.html">Detailed Projects</a>
+      <a href="cv.html">CV</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Mechanical Engineering · McGill University</div>
+    <h1>Building, testing, and <em>tooling</em> real hardware.</h1>
+    <p class="lede">
+      I'm a mechanical engineering student and Pratt&nbsp;&amp;&nbsp;Whitney Canada intern who co-leads
+      the injector project on the McGill Rocket Team. My work runs from hybrid-rocket
+      hotfire analysis and vortex injector design to Arduino-driven mechanisms and
+      data pipelines that make engineering decisions faster.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="projects.html">View detailed projects →</a>
+      <a class="btn btn-ghost" href="cv.html">Read the CV</a>
+    </div>
+
+    <div class="spec-strip">
+      <div class="cell"><div class="k">Discipline</div><div class="v">Mechanical Eng.</div></div>
+      <div class="cell"><div class="k">Team Role</div><div class="v">Injector Co-Lead</div></div>
+      <div class="cell"><div class="k">CAD</div><div class="v">NX · SolidWorks · CATIA</div></div>
+      <div class="cell"><div class="k">Code</div><div class="v">Python · JS · Power Platform</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="num">01 /</span><h2>Selected Projects</h2></div>
+    <p class="section-sub">
+      A mix of rocket-team engineering, personal hardware builds, and coursework —
+      each with a detailed writeup, media, and the tools behind it.
+    </p>
+
+    <div class="grid">
+
+      <!-- Thrust Analysis Tool -->
+      <a class="card" href="projects.html#thrust">
+        <div class="thumb">
+          <img src="media/Thrust%20Analysis/massflowrate%20data.png" alt="Oxidizer mass flow rate analysis plot from HF1.1 hotfire">
+        </div>
+        <div class="body">
+          <div class="kicker">McGill Rocket Team · Python</div>
+          <h3>Thrust Analysis Tool</h3>
+          <p>A Python pipeline that ingests hotfire test-stand data and outputs the coefficient
+             of combustion efficiency — mass flow, chamber pressure, and run temperature in one pass.</p>
+          <div class="foot">
+            <div class="stack"><span class="chip">Python</span><span class="chip">Matplotlib</span><span class="chip">Dyer model</span></div>
+            <span class="more">Details →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Automatic Curtains -->
+      <a class="card" href="projects.html#curtains">
+        <div class="thumb">
+          <img src="media/Curtain%20Project/fully%20assembled.jpg" alt="Automatic curtains fully assembled and installed">
+        </div>
+        <div class="body">
+          <div class="kicker">Personal Project · Arduino</div>
+          <h3>Automatic Curtains</h3>
+          <p>Custom gear train and servo mount designed in SolidWorks, driven by an Arduino UNO
+             that opens the curtains at sunrise and closes them at night.</p>
+          <div class="foot">
+            <div class="stack"><span class="chip">SolidWorks</span><span class="chip">Arduino</span><span class="chip">3D print</span></div>
+            <span class="more">Details →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vortex Injector Redesign -->
+      <a class="card" href="projects.html#injector">
+        <div class="thumb">
+          <img src="media/Injector%20Redesign/benchscale.png" alt="Bench-scale vortex injector engineering drawing">
+        </div>
+        <div class="body">
+          <div class="kicker">McGill Rocket Team · NX</div>
+          <h3>Vortex Injector Redesign</h3>
+          <p>Redesigned the full-scale and low-thrust vortex injectors in NX around research
+             favouring ~45° hole angles, then produced new GD&amp;T drawings.</p>
+          <div class="foot">
+            <div class="stack"><span class="chip">Siemens NX</span><span class="chip">GD&amp;T</span><span class="chip">Propulsion</span></div>
+            <span class="more">Details →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Local AI Model -->
+      <a class="card" href="projects.html#ai">
+        <div class="thumb">
+          <div class="ph">
+            <span class="ico">◈</span>
+            <span class="lbl">Local AI Model</span>
+            <span class="path">media/Other/ai_cover.png</span>
+          </div>
+        </div>
+        <div class="body">
+          <div class="kicker">Personal Project · RAG</div>
+          <h3>Local AI Model</h3>
+          <p>A locally-run retrieval-augmented generation setup — tuning the indexing → retrieval →
+             augmentation → generation pipeline with open-source models. Inspired by work at Pratt&nbsp;&amp;&nbsp;Whitney.</p>
+          <div class="foot">
+            <div class="stack"><span class="chip">Python</span><span class="chip">RAG</span><span class="chip">Open-source LLMs</span></div>
+            <span class="more">Details →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Chair -->
+      <a class="card" href="projects.html#chair">
+        <div class="thumb">
+          <img src="media/Chair%20Project/chair_assembly.jpeg" alt="NX assembly render of the assisted-seating chair">
+        </div>
+        <div class="body">
+          <div class="kicker">MECH 292 · Team of 5</div>
+          <h3>Chair with Assisted Seating &amp; Standing</h3>
+          <p>A mechanism-assisted chair that helps a user sit and stand. My first full NX assembly —
+             I CADed the complete model and helped build the supporting circuit.</p>
+          <div class="foot">
+            <div class="stack"><span class="chip">Siemens NX</span><span class="chip">Mechanism</span><span class="chip">Circuit</span></div>
+            <span class="more">Details →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Work at P&W teaser -->
+      <a class="card" href="cv.html">
+        <div class="thumb">
+          <img src="media/Other/Catia_injector_FEA_topface.png" alt="CATIA injector FEA analysis render">
+
+        </div>
+        <div class="body">
+          <div class="kicker">Internship · OPM</div>
+          <h3>Knowledge Graph &amp; PM Dashboards</h3>
+          <p>Built an interactive knowledge-graph app, Python extractors for Excel/PDF data,
+             and Power Automate flows feeding an automated Power BI PM dashboard.</p>
+          <div class="foot">
+            <div class="stack"><span class="chip">Python</span><span class="chip">Power Automate</span><span class="chip">Power BI</span></div>
+            <span class="more">See CV →</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="row">
+      <div>© <span id="yr"></span> Neel Viegas · Montréal, QC</div>
+      <div>
+        <a href="mailto:neelviegas@gmail.com">neelviegas@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/neel-viegas-375a89242" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="cv.html">CV</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
