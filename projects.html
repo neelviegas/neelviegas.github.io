@@ -34,10 +34,41 @@
 
 <main class="wrap">
 
+  <!-- ============ LOCAL AI MODEL ============ -->
+  <section class="proj" id="ai">
+    <div class="proj-head">
+      <span class="num">01</span>
+      <h2>Local AI Model</h2>
+      <span class="badge">Personal Project</span>
+    </div>
+    <div class="proj-meta">
+      <span><b>Role:</b> Solo</span>
+      <span><b>Stack:</b> Ollama 3.2 · RAG · Python</span>
+      <span><b>Timeline:</b> Jun 2026 – present</span>
+    </div>
+    <div class="proj-body">
+      <div class="text">
+        <p>Locally run augmented regeneration setup (Ollama 3.2 for now). I plan to train it to help
+           analyze my thermodynamic solutions via parameter and pipeline optimization.</p>
+        <ul class="tight">
+          <li>Runs entirely locally on open-source models (no external API).</li>
+          <li>Tuning the retrieval &amp; generation pipeline for grounded answers.</li>
+          <li>Next step: adapt it to check and analyze my thermodynamics work.</li>
+        </ul>
+      </div>
+      <div class="proj-media">
+        <figure>
+          <img src="media/AI/ai%20question%20example.png" alt="Local AI model answering an example question">
+          <figcaption>FIG 1 — Example question &amp; response.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ THRUST ANALYSIS ============ -->
   <section class="proj" id="thrust">
     <div class="proj-head">
-      <span class="num">01</span>
+      <span class="num">02</span>
       <h2>Thrust Analysis Tool</h2>
       <span class="badge">McGill Rocket Team</span>
     </div>
@@ -48,15 +79,13 @@
     </div>
     <div class="proj-body">
       <div class="text">
-        <p>I lead this project as the lead of the injector team on the McGill Rocket Team. The goal
-           was to extract the coefficient of combustion efficiency from our hotfire data.</p>
-        <p>I built the tool in Python using Matplotlib. It ingests raw test-stand telemetry from a
-           hybrid hotfire and turns it into a clean, four-panel analysis: oxidizer mass flow rate
-           (via the Dyer model), run vs. chamber pressure with the pressure differential that drives
-           flow, run temperature, and cumulative oxidizer mass consumed.</p>
-        <p>Handling the messy realities of test data — like substituting a faulted thermocouple
-           (tc4 in for tc5) — was part of making the output trustworthy enough to feed downstream
-           efficiency calculations.</p>
+        <p>A python pipeline that takes in hotfire test data and outputs the coefficient of
+           combustion efficiency. Calculations involved: mass flow rate, regression law, and
+           chamber pressure &amp; temp.</p>
+        <p>It ingests raw test-stand telemetry from a hybrid hotfire and turns it into a clean set
+           of analysis graphs, handling the messy realities of test data — like substituting a
+           faulted thermocouple (tc4 in for tc5) — so the output is trustworthy enough to feed
+           downstream efficiency calculations.</p>
         <div class="callout">
           <div class="k">Result — HF1.1</div>
           Total oxidizer 11.70&nbsp;kg · peak 1.86&nbsp;kg/s · average 1.69&nbsp;kg/s.
@@ -64,55 +93,18 @@
       </div>
       <div class="proj-media">
         <figure>
-          <img src="media/Thrust%20Analysis/massflowrate%20data.png" alt="HF1.1 four-panel oxidizer mass flow analysis">
-          <figcaption>FIG 1 — HF1.1 oxidizer mass flow analysis (Dyer model, tc4 run temp).</figcaption>
+          <img src="media/Thrust%20Analysis/comb%20eff%20graph.png" alt="Combustion efficiency graph">
+          <figcaption>FIG 1 — Combustion efficiency.</figcaption>
         </figure>
         <figure>
-          <img src="media/Thrust%20Analysis/upright%20graphs.png" alt="Upright thrust and pressure graphs from the analysis tool">
-          <figcaption>FIG 2 — Run/chamber pressure &amp; thrust curves.</figcaption>
+          <img src="media/Thrust%20Analysis/updated%20graphs%20thrust%20analysis.png" alt="Updated thrust analysis graphs">
+          <figcaption>FIG 2 — Mass flow, pressure &amp; temperature.</figcaption>
         </figure>
         <figure>
-          <img src="media/Other/Test%20Stand%20Hotfire%20pic.JPEG" alt="Hybrid rocket hotfire on the test stand">
+          <video controls preload="none" playsinline style="width:100%;border:1px solid var(--line);border-radius:4px;background:#000;">
+            <source src="media/Thrust%20Analysis/ScreenRecording_04-26-2026%2008-56-20_1.mov" type="video/quicktime">
+          </video>
           <figcaption>FIG 3 — Test-stand hotfire.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ VORTEX INJECTOR ============ -->
-  <section class="proj" id="injector">
-    <div class="proj-head">
-      <span class="num">02</span>
-      <h2>Vortex Injector Redesign</h2>
-      <span class="badge">McGill Rocket Team</span>
-    </div>
-    <div class="proj-meta">
-      <span><b>Role:</b> Injector project (member → co-lead)</span>
-      <span><b>Stack:</b> Siemens NX · GD&amp;T</span>
-      <span><b>Timeline:</b> Aug 2025 – May 2026</span>
-    </div>
-    <div class="proj-body">
-      <div class="text">
-        <p>In response to a growing body of research advocating for vortex injector hole angles
-           closer to 45&nbsp;degrees, I was tasked with updating our bench-scale and full-scale
-           vortex injectors to optimize oxidizer–fuel mixing in our hybrid rocket propulsion system.</p>
-        <p>I presented my research to the team, then redesigned both injectors in NX and produced
-           new manufacturing drawings — including the full GD&amp;T, sections, and detail views needed
-           to actually make the parts.</p>
-        <ul class="tight">
-          <li>Researched and justified the ~45° hole-angle change against prior geometry.</li>
-          <li>Rebuilt the bench-scale and full-scale injector CAD in Siemens NX.</li>
-          <li>Authored new drawings with tolerances, seal callouts, and detail scales.</li>
-        </ul>
-      </div>
-      <div class="proj-media">
-        <figure>
-          <img src="media/Injector%20Redesign/benchscale.png" alt="Bench-scale vortex injector drawing">
-          <figcaption>FIG 1 — Bench-scale vortex injector drawing.</figcaption>
-        </figure>
-        <figure>
-          <img src="media/Injector%20Redesign/fullscale.png" alt="Full-scale vortex injector drawing">
-          <figcaption>FIG 2 — Full-scale vortex injector drawing.</figcaption>
         </figure>
       </div>
     </div>
@@ -135,9 +127,8 @@
         <p>I live next to a building whose lights, unfortunately for me, never turn off. That said,
            I like waking up to the sun without compromising my sleep. This led me to build automatic
            curtains.</p>
-        <p>I designed the circuit and wrote a script on an Arduino UNO that closes my curtains at
-           night and opens them in the morning. Then I designed a gear train and supports for the
-           circuit and the servo in SolidWorks. I assembled everything — and can now sleep in peace.</p>
+        <p>Custom gear train and servo mount designed in SolidWorks. Powered and controlled by an
+           Arduino UNO that opens the curtains in the morning and closes them at night.</p>
         <ul class="tight">
           <li>Designed the drive gears and servo/electronics mounts in SolidWorks, then 3D printed them.</li>
           <li>Built the circuit around an Arduino UNO with a timed open/close routine.</li>
@@ -173,35 +164,40 @@
     </div>
   </section>
 
-  <!-- ============ LOCAL AI MODEL ============ -->
-  <section class="proj" id="ai">
+  <!-- ============ VORTEX INJECTOR ============ -->
+  <section class="proj" id="injector">
     <div class="proj-head">
       <span class="num">04</span>
-      <h2>Local AI Model</h2>
-      <span class="badge">Personal Project</span>
+      <h2>Vortex Injector Redesign</h2>
+      <span class="badge">McGill Rocket Team</span>
     </div>
     <div class="proj-meta">
-      <span><b>Role:</b> Solo</span>
-      <span><b>Stack:</b> Python · Open-source LLMs · RAG</span>
-      <span><b>Timeline:</b> Jun 2026 – present</span>
+      <span><b>Role:</b> Injector project (member &rarr; co-lead)</span>
+      <span><b>Stack:</b> Siemens NX · GD&amp;T</span>
+      <span><b>Timeline:</b> Aug 2025 – May 2026</span>
     </div>
     <div class="proj-body">
       <div class="text">
-        <p>Inspired by work I did at Pratt &amp; Whitney, I built a locally-run retrieval-augmented
-           generation (RAG) system using open-source AI models.</p>
-        <p>The focus was tuning the parameters for an ideal pipeline: indexing → retrieval →
-           augmentation &amp; generation — so that a fully local model could answer questions
-           accurately over a private document set.</p>
+        <p>In response to a growing body of research advocating for vortex injector hole angles
+           closer to 45&nbsp;degrees, I was tasked with updating our bench-scale and full-scale
+           vortex injectors to optimize oxidizer–fuel mixing in our hybrid rocket propulsion system.</p>
+        <p>I presented my research to the team, then redesigned both injectors in NX and produced
+           new manufacturing drawings — including the full GD&amp;T, sections, and detail views needed
+           to actually make the parts.</p>
         <ul class="tight">
-          <li>Ran open-source models entirely locally (no external API).</li>
-          <li>Tested indexing and retrieval parameters for accuracy and speed.</li>
-          <li>Tuned the augmentation + generation stage for grounded answers.</li>
+          <li>Researched and justified the ~45° hole-angle change against prior geometry.</li>
+          <li>Rebuilt the bench-scale and full-scale injector CAD in Siemens NX.</li>
+          <li>Authored new drawings with tolerances, seal callouts, and detail scales.</li>
         </ul>
       </div>
       <div class="proj-media">
         <figure>
-          <div class="ph" style="aspect-ratio:16/10;"><span class="ico">◈</span><span class="lbl">Pipeline / demo</span><span class="path">media/Other/ai_pipeline.png</span></div>
-          <figcaption>FIG 1 — RAG pipeline (drop in a diagram or screenshot).</figcaption>
+          <img src="media/Injector%20Redesign/fullscale.png" alt="Full-scale vortex injector drawing">
+          <figcaption>FIG 1 — Full-scale vortex injector drawing.</figcaption>
+        </figure>
+        <figure>
+          <img src="media/Injector%20Redesign/benchscale.png" alt="Bench-scale vortex injector drawing">
+          <figcaption>FIG 2 — Bench-scale vortex injector drawing.</figcaption>
         </figure>
       </div>
     </div>
@@ -221,10 +217,10 @@
     </div>
     <div class="proj-body">
       <div class="text">
-        <p>This was my first ever time CADing in NX — for MECH 292, our design class, in a team of five.</p>
-        <p>The chair uses an assist mechanism to help a user sit down and stand up. I CADed the entire
-           assembly on my own, and the team designed and assembled a supporting circuit. We presented
-           the project to the class and answered design questions.</p>
+        <p>Mechanism to help users sit or stand. This was my first time using / learning CAD!</p>
+        <p>Built for MECH 292, our design class, in a team of five. I CADed the entire assembly on
+           my own, and the team designed and assembled a supporting circuit. We presented the
+           project to the class and answered design questions.</p>
         <ul class="tight">
           <li>Modelled the full chair assembly in Siemens NX (solo).</li>
           <li>Contributed to the assist-mechanism circuit (team).</li>

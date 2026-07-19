@@ -24,32 +24,8 @@
   </div>
 </nav>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">Mechanical Engineering · McGill University</div>
-    <h1>Building, testing, and <em>tooling</em> real hardware.</h1>
-    <p class="lede">
-      I'm a mechanical engineering student and Pratt&nbsp;&amp;&nbsp;Whitney Canada intern who co-leads
-      the injector project on the McGill Rocket Team. My work runs from hybrid-rocket
-      hotfire analysis and vortex injector design to Arduino-driven mechanisms and
-      data pipelines that make engineering decisions faster.
-    </p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="projects.html">View detailed projects →</a>
-      <a class="btn btn-ghost" href="cv.html">Read the CV</a>
-    </div>
-
-    <div class="spec-strip">
-      <div class="cell"><div class="k">Discipline</div><div class="v">Mechanical Eng.</div></div>
-      <div class="cell"><div class="k">Team Role</div><div class="v">Injector Co-Lead</div></div>
-      <div class="cell"><div class="k">CAD</div><div class="v">NX · SolidWorks · CATIA</div></div>
-      <div class="cell"><div class="k">Code</div><div class="v">Python · JS · Power Platform</div></div>
-    </div>
-  </div>
-</header>
-
 <main>
-<section class="section">
+<section class="section" style="border-top:0;padding-top:52px;">
   <div class="wrap">
     <div class="section-head"><span class="num">01 /</span><h2>Selected Projects</h2></div>
     <p class="section-sub">
@@ -59,16 +35,34 @@
 
     <div class="grid">
 
+      <!-- Local AI Model -->
+      <a class="card" href="projects.html#ai">
+        <div class="thumb">
+          <img src="media/AI/ai%20question%20example.png" alt="Local AI model answering a question">
+        </div>
+        <div class="body">
+          <div class="kicker">Personal Project · LLM</div>
+          <h3>Local AI Model</h3>
+          <p>Locally run augmented regeneration setup (Ollama 3.2 for now). I plan to train it to
+             help analyze my thermodynamic solutions via parameter and pipeline optimization.</p>
+          <div class="foot">
+            <div class="stack"><span class="chip">Ollama 3.2</span><span class="chip">RAG</span><span class="chip">Python</span></div>
+            <span class="more">Details →</span>
+          </div>
+        </div>
+      </a>
+
       <!-- Thrust Analysis Tool -->
       <a class="card" href="projects.html#thrust">
         <div class="thumb">
-          <img src="media/Thrust%20Analysis/massflowrate%20data.png" alt="Oxidizer mass flow rate analysis plot from HF1.1 hotfire">
+          <img src="media/Thrust%20Analysis/comb%20eff%20graph.png" alt="Combustion efficiency graph from the thrust analysis tool">
         </div>
         <div class="body">
           <div class="kicker">McGill Rocket Team · Python</div>
           <h3>Thrust Analysis Tool</h3>
-          <p>A Python pipeline that ingests hotfire test-stand data and outputs the coefficient
-             of combustion efficiency — mass flow, chamber pressure, and run temperature in one pass.</p>
+          <p>A python pipeline that takes in hotfire test data and outputs the coefficient of
+             combustion efficiency. Calculations involved: mass flow rate, regression law, and
+             chamber pressure &amp; temp.</p>
           <div class="foot">
             <div class="stack"><span class="chip">Python</span><span class="chip">Matplotlib</span><span class="chip">Dyer model</span></div>
             <span class="more">Details →</span>
@@ -84,8 +78,8 @@
         <div class="body">
           <div class="kicker">Personal Project · Arduino</div>
           <h3>Automatic Curtains</h3>
-          <p>Custom gear train and servo mount designed in SolidWorks, driven by an Arduino UNO
-             that opens the curtains at sunrise and closes them at night.</p>
+          <p>Custom gear train and servo mount designed in SolidWorks. Powered and controlled by an
+             Arduino UNO that opens the curtains in the morning and closes them at night.</p>
           <div class="foot">
             <div class="stack"><span class="chip">SolidWorks</span><span class="chip">Arduino</span><span class="chip">3D print</span></div>
             <span class="more">Details →</span>
@@ -96,36 +90,15 @@
       <!-- Vortex Injector Redesign -->
       <a class="card" href="projects.html#injector">
         <div class="thumb">
-          <img src="media/Injector%20Redesign/benchscale.png" alt="Bench-scale vortex injector engineering drawing">
+          <img src="media/Injector%20Redesign/fullscale.png" alt="Full-scale vortex injector engineering drawing">
         </div>
         <div class="body">
           <div class="kicker">McGill Rocket Team · NX</div>
           <h3>Vortex Injector Redesign</h3>
-          <p>Redesigned the full-scale and low-thrust vortex injectors in NX around research
+          <p>Redesigned the bench-scale and full-scale vortex injectors in NX around research
              favouring ~45° hole angles, then produced new GD&amp;T drawings.</p>
           <div class="foot">
             <div class="stack"><span class="chip">Siemens NX</span><span class="chip">GD&amp;T</span><span class="chip">Propulsion</span></div>
-            <span class="more">Details →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Local AI Model -->
-      <a class="card" href="projects.html#ai">
-        <div class="thumb">
-          <div class="ph">
-            <span class="ico">◈</span>
-            <span class="lbl">Local AI Model</span>
-            <span class="path">media/Other/ai_cover.png</span>
-          </div>
-        </div>
-        <div class="body">
-          <div class="kicker">Personal Project · RAG</div>
-          <h3>Local AI Model</h3>
-          <p>A locally-run retrieval-augmented generation setup — tuning the indexing → retrieval →
-             augmentation → generation pipeline with open-source models. Inspired by work at Pratt&nbsp;&amp;&nbsp;Whitney.</p>
-          <div class="foot">
-            <div class="stack"><span class="chip">Python</span><span class="chip">RAG</span><span class="chip">Open-source LLMs</span></div>
             <span class="more">Details →</span>
           </div>
         </div>
@@ -139,29 +112,10 @@
         <div class="body">
           <div class="kicker">MECH 292 · Team of 5</div>
           <h3>Chair with Assisted Seating &amp; Standing</h3>
-          <p>A mechanism-assisted chair that helps a user sit and stand. My first full NX assembly —
-             I CADed the complete model and helped build the supporting circuit.</p>
+          <p>Mechanism to help users sit or stand. This was my first time using / learning CAD!</p>
           <div class="foot">
             <div class="stack"><span class="chip">Siemens NX</span><span class="chip">Mechanism</span><span class="chip">Circuit</span></div>
             <span class="more">Details →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Work at P&W teaser -->
-      <a class="card" href="cv.html">
-        <div class="thumb">
-          <img src="media/Other/Catia_injector_FEA_topface.png" alt="CATIA injector FEA analysis render">
-
-        </div>
-        <div class="body">
-          <div class="kicker">Internship · OPM</div>
-          <h3>Knowledge Graph &amp; PM Dashboards</h3>
-          <p>Built an interactive knowledge-graph app, Python extractors for Excel/PDF data,
-             and Power Automate flows feeding an automated Power BI PM dashboard.</p>
-          <div class="foot">
-            <div class="stack"><span class="chip">Python</span><span class="chip">Power Automate</span><span class="chip">Power BI</span></div>
-            <span class="more">See CV →</span>
           </div>
         </div>
       </a>
