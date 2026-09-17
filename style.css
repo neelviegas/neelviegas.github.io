@@ -51,10 +51,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   transition: background-color 0.25s ease, color 0.25s ease;
-  background:
-    linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 28px 28px,
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 28px 28px,
-    var(--paper);
+  background: var(--paper);
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 16px;
