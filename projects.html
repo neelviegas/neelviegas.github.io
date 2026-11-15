@@ -45,31 +45,57 @@
       <span class="badge">MECH 390</span>
     </div>
     <div class="proj-meta">
-      <span><b>Role:</b> Base frame, FEA &amp; topology optimization (team of 4)</span>
-      <span><b>Tools:</b> SolidWorks · FEA · Topology Optimization · Assemblies</span>
+      <span><b>Role:</b> Thermal-camera drone, full assembly (team of 4)</span>
+      <span><b>Tools:</b> SolidWorks · Topology Optimization · FEA · Drawings &amp; BOM · DFA/DFM</span>
       <span><b>Timeline:</b> Sep 2026 – present</span>
     </div>
     <div class="proj-body proj-body-stack">
       <div class="text">
-        <p class="goal"><b>Goal (assigned):</b> Design four drones that explore different parts of a
-           damaged area.</p>
-        <p>My team and I are designing four different drones to reach our goal. So far, I have used
-           topology optimization and FEAs to improve our components. Each of the other three drones
-           will use scaled versions of this frame. While it is not required, we are aiming to have a
-           working prototype!</p>
+        <p class="goal"><b>Goal (assigned):</b> Design a fleet of drones that map a damaged area after
+           a disaster. Mine is the thermal-camera drone, used to find people and hot spots under debris
+           and smoke (the other drones carry LIDAR and ground-penetrating radar).</p>
+        <p>I designed a medium-sized quadcopter that carries a protected thermal camera and built the
+           full assembly in SolidWorks: arms, base plates, bought motors, props, flight controller and
+           battery, plus the camera mount. Apart from the bought parts and standard hardware, I designed
+           every part myself (the base plates and arms are modified from the class frame).</p>
+        <p>The camera sits in a servo-driven U bracket that tilts from facing forward to straight down,
+           turning on a ball bearing. The whole pod hangs from rubber ball dampers to keep propeller
+           vibration out of the images, inside a PC/ABS housing that protects it from debris. Two
+           A-frame skids double as landing gear so the drone touches down before the camera does. I
+           followed DFA/DFM throughout: simple parts, standard Toolbox screws, and tapped holes instead
+           of nuts.</p>
+        <ul class="tight">
+          <li>Result (Gate 2): complete drone assembly with a 15-step exploded view, an assembly
+              drawing with a 15-item BOM, and 9 part drawings.</li>
+          <li>Cut arm mass from 102.4 g to 85.5 g each (68 g over 4 arms) with a topology study at 20 N
+              per motor. Max bending stress is about 24 MPa against a 276 MPa yield. I didn't use the fully
+              optimized 51 g arm because it lost too much torsional stiffness.</li>
+          <li>Designed the thermal-camera tilt mount: micro servo, U bracket, housing pod on 4 ball
+              dampers, and skids that double as landing gear.</li>
+          <li>Packaged and tested the files so they open cleanly on another PC and on an older
+              version of SolidWorks.</li>
+        </ul>
       </div>
       <div class="proj-media">
         <figure class="wide">
+          <img src="media/Drone%20Project/Exploded%20Assembly.png" alt="Exploded assembly drawing of the thermal-camera drone with a 15-item bill of materials">
+          <figcaption>FIG 1: Exploded assembly drawing with 15-item BOM.</figcaption>
+        </figure>
+        <figure>
           <img src="media/Drone%20Project/Topology%20Optimization.png" alt="Topology optimization material-mass study of a drone arm">
-          <figcaption>FIG 1: Topology optimization (material-mass study).</figcaption>
+          <figcaption>FIG 2: Topology optimization of the arm (20 N at the motor).</figcaption>
         </figure>
         <figure>
-          <img src="media/Drone%20Project/Drone%20Frame.png" alt="SolidWorks model of the base drone frame">
-          <figcaption>FIG 2: Drone frame (SolidWorks).</figcaption>
+          <img src="media/Drone%20Project/Final%20Arm.jpeg" alt="Final drone arm with a narrowed waist and slot, modelled in SolidWorks">
+          <figcaption>FIG 3: Final arm, 85.5 g (down from 102.4 g).</figcaption>
         </figure>
         <figure>
-          <img src="media/Drone%20Project/Drone%20Frame%20Optimized.png" alt="Optimized drone frame modelled in SolidWorks">
-          <figcaption>FIG 3: Optimized drone frame (SolidWorks).</figcaption>
+          <img src="media/Drone%20Project/Housing%20Drawing.png" alt="Part drawing of the PC/ABS camera housing">
+          <figcaption>FIG 4: Camera housing drawing (PC/ABS).</figcaption>
+        </figure>
+        <figure>
+          <img src="media/Drone%20Project/U%20Bracket%20Drawing.png" alt="Part drawing of the servo-driven U bracket that tilts the camera">
+          <figcaption>FIG 5: Servo-driven U bracket drawing (PC/ABS).</figcaption>
         </figure>
       </div>
     </div>
