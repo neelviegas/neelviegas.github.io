@@ -12,8 +12,9 @@
 <script>
   (function(){
     try {
-      var t = localStorage.getItem('theme');
-      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      // Always start in light mode; a dark-mode choice only lasts for this visit (tab session).
+      try { localStorage.removeItem('theme'); } catch(e){}
+      var t = sessionStorage.getItem('theme') || 'light';
       if (t === 'dark') document.documentElement.setAttribute('data-theme','dark');
     } catch(e){}
   })();
@@ -79,7 +80,7 @@ document.getElementById('yr').textContent = new Date().getFullYear();
     var dark = document.documentElement.getAttribute('data-theme') === 'dark';
     if (dark) { document.documentElement.removeAttribute('data-theme'); }
     else { document.documentElement.setAttribute('data-theme','dark'); }
-    try { localStorage.setItem('theme', dark ? 'light' : 'dark'); } catch(e){}
+    try { sessionStorage.setItem('theme', dark ? 'light' : 'dark'); } catch(e){}
   });
 })();
 </script>
