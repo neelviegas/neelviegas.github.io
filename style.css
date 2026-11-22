@@ -264,6 +264,13 @@ a:hover { color: var(--accent); }
   .thrust-grid .tg-c img { height: auto; }
 }
 
+/* go-kart: two photos side by side at equal height (columns sized by aspect ratio) */
+.kart-grid {
+  display: grid; grid-template-columns: 1.078fr 1.777fr;
+  gap: 22px; margin-top: 30px; align-items: start;
+}
+@media (max-width: 860px) { .kart-grid { grid-template-columns: 1fr; } }
+
 /* masonry: photos pack by height, no gaps */
 .masonry { columns: 2; column-gap: 22px; margin-top: 30px; }
 .masonry-3 { columns: 3; }

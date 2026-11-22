@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Detailed Projects — Neel Viegas</title>
-<meta name="description" content="Detailed engineering writeups: post-disaster mapping drones, thrust analysis tooling, vortex injector redesign, automatic curtains, a local AI model, and an assisted-seating chair.">
+<meta name="description" content="Detailed engineering writeups: post-disaster mapping drones, a go-kart build, thrust analysis tooling, vortex injector redesign, automatic curtains, a local AI model, and an assisted-seating chair.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -93,6 +93,46 @@
         <figure>
           <img src="media/Drone%20Project/Arm%20Final.jpg" alt="Final drone arm with a 22 mm waist and a lightening slot">
           <figcaption>FIG 7: Final arm, 85.5 g (22 mm waist, R5 fillets).</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GO-KART ============ -->
+  <section class="proj" id="gokart">
+    <div class="proj-head">
+      <h2>Go-Kart (Personal Project)</h2>
+    </div>
+    <div class="proj-meta">
+      <span><b>Tools:</b> Siemens NX · Power &amp; gearing calcs · LaTeX</span>
+      <span><b>Timeline:</b> Oct 2026 – present</span>
+    </div>
+    <div class="proj-body proj-body-stack">
+      <div class="text">
+        <p><b>Goal:</b> Build a go-kart from scratch (ideally fast enough to worry my parents)</p>
+        <p>I began by planning out my power and safety requirements, then buying the engine off of
+           Facebook Marketplace: a GX390 (389cc, 13 hp) for $250. Unfortunately, only 1” of the
+           crankshaft is exposed, which means I need to replace it. I am currently planning a complete
+           engine rebuild to replace it and clean the engine.</p>
+        <p>In the meantime, I have begun laying out some design ideas for the frame in NX and deciding
+           what other parts to buy. So far, I have documented everything in detail in a report to keep
+           tabs on my work and will continue to do so until the project is complete.</p>
+        <p>From my calcs so far:</p>
+        <ul class="tight">
+          <li>Targets: 60 km/h top speed, $1000 CAD budget, minimum safety factor of 2.</li>
+          <li>Reaching 50 km/h in 3 s takes about 9.7 hp at the engine, so the 13 hp GX390 has margin.</li>
+          <li>A 12-tooth clutch to a 38-tooth axle sprocket (3.17:1) hits 60 km/h at the 3600 rpm governor.</li>
+          <li>About 510 N at the wheels, well under the 1200 N grip limit, for roughly 5 s from 0 to 50 km/h.</li>
+        </ul>
+      </div>
+      <div class="kart-grid">
+        <figure>
+          <img src="media/Go%20Kart/GX390%20Engine.jpg" alt="Used Honda GX390 engine as bought, sitting on its rusty mounting plate">
+          <figcaption>FIG 1: Honda GX390, as bought.</figcaption>
+        </figure>
+        <figure>
+          <img src="media/Go%20Kart/Adapter%20Removal.jpg" alt="Torch heating a seized adapter off the crankshaft, with a fire extinguisher on standby">
+          <figcaption>FIG 2: Heating the seized adapter off the crankshaft (extinguisher on standby).</figcaption>
         </figure>
       </div>
     </div>
@@ -352,7 +392,7 @@ document.getElementById('yr').textContent = new Date().getFullYear();
   var lb = document.getElementById('lightbox');
   var lbImg = document.getElementById('lightbox-img');
   // any <img> inside a project figure is zoomable
-  document.querySelectorAll('.proj-media img, .thrust-grid img, .chair-grid img, .masonry img').forEach(function (img) {
+  document.querySelectorAll('.proj-media img, .thrust-grid img, .chair-grid img, .masonry img, .kart-grid img').forEach(function (img) {
     img.style.cursor = 'zoom-in';
     img.addEventListener('click', function () {
       lbImg.src = img.currentSrc || img.src;
