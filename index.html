@@ -164,10 +164,6 @@
   </div>
 </footer>
 
-<div id="lightbox" class="lightbox" aria-hidden="true">
-  <img id="lightbox-img" src="" alt="">
-</div>
-
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
 
@@ -181,32 +177,6 @@ document.getElementById('yr').textContent = new Date().getFullYear();
     else { document.documentElement.setAttribute('data-theme','dark'); }
     try { localStorage.setItem('theme', dark ? 'light' : 'dark'); } catch(e){}
   });
-})();
-
-// Card image click -> zoom (not navigate); rest of card still navigates
-(function () {
-  var lb = document.getElementById('lightbox');
-  var lbImg = document.getElementById('lightbox-img');
-  document.querySelectorAll('.card .thumb').forEach(function (thumb) {
-    var img = thumb.querySelector('img');
-    if (!img) return;
-    thumb.style.cursor = 'zoom-in';
-    thumb.addEventListener('click', function (e) {
-      e.preventDefault();   // stop the card link
-      e.stopPropagation();
-      lbImg.src = img.currentSrc || img.src;
-      lbImg.alt = img.alt || '';
-      lb.classList.add('open');
-      lb.setAttribute('aria-hidden', 'false');
-    });
-  });
-  function close() {
-    lb.classList.remove('open');
-    lb.setAttribute('aria-hidden', 'true');
-    lbImg.src = '';
-  }
-  lb.addEventListener('click', close);
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
 })();
 </script>
 </body>
