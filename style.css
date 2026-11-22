@@ -177,8 +177,8 @@ a:hover { color: var(--accent); }
 }
 .card h3 { font-family: var(--font-head); font-weight: 700; font-size: 1.28rem; margin: 0 0 8px; }
 .card p { color: var(--ink-soft); font-size: 0.95rem; margin: 0 0 18px; flex: 1; }
-.card .foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
-.card .stack { display: flex; flex-wrap: wrap; gap: 6px; }
+.card .foot { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.card .tools { color: var(--ink-soft); font-size: 0.85rem; }
 .chip {
   font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-soft);
   background: var(--paper-2); padding: 3px 9px; border-radius: 4px;
