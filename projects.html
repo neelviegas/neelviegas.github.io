@@ -41,40 +41,29 @@
   <!-- ============ POST-DISASTER MAPPING DRONES ============ -->
   <section class="proj" id="drones">
     <div class="proj-head">
-      <h2>Post-Disaster Situational Mapping</h2>
-      <span class="badge">MECH 390</span>
+      <h2>Post-Disaster Situational Mapping (MECH 390)</h2>
     </div>
     <div class="proj-meta">
-      <span><b>Role:</b> Thermal-camera drone, full assembly (team of 4)</span>
       <span><b>Tools:</b> SolidWorks · Topology Optimization · FEA · Drawings &amp; BOM · DFA/DFM</span>
-      <span><b>Timeline:</b> Sep 2026 – present</span>
+      <span><b>Timeline:</b> Sep 2026 – Nov 2026</span>
     </div>
     <div class="proj-body proj-body-stack">
       <div class="text">
-        <p class="goal"><b>Goal (assigned):</b> Design a fleet of drones that map a damaged area after
-           a disaster. Mine is the thermal-camera drone, used to find people and hot spots under debris
-           and smoke (the other drones carry LIDAR and ground-penetrating radar).</p>
-        <p>I designed a medium-sized quadcopter that carries a protected thermal camera and built the
-           full assembly in SolidWorks: arms, base plates, bought motors, props, flight controller and
-           battery, plus the camera mount. Apart from the bought parts and standard hardware, I designed
-           every part myself (the base plates and arms are modified from the class frame).</p>
+        <p><b>Goal (assigned):</b> Design a fleet of drones that map a damaged area after a disaster.
+           Mine is the thermal-camera drone, used to find people and hot spots under debris and smoke
+           (the other drones carry LIDAR and ground-penetrating radar).</p>
+        <p>I designed a medium-sized drone that carries a protected thermal camera, and built the full
+           assembly in SolidWorks: arms, base plates, bought motors, props, flight controller, battery
+           and mount. Apart from the bought parts and standard hardware, I designed every part myself
+           (the base plates and arms are modified from the class frame).</p>
         <p>The camera sits in a servo-driven U bracket that tilts from facing forward to straight down,
-           turning on a ball bearing. The whole pod hangs from rubber ball dampers to keep propeller
-           vibration out of the images, inside a PC/ABS housing that protects it from debris. Two
-           A-frame skids double as landing gear so the drone touches down before the camera does. I
-           followed DFA/DFM throughout: simple parts, standard Toolbox screws, and tapped holes instead
-           of nuts.</p>
-        <ul class="tight">
-          <li>Result (Gate 2): complete drone assembly with a 15-step exploded view, an assembly
-              drawing with a 15-item BOM, and 9 part drawings.</li>
-          <li>Cut arm mass from 102.4 g to 85.5 g each (68 g over 4 arms) with a topology study at 20 N
-              per motor. Max bending stress is about 24 MPa against a 276 MPa yield. I didn't use the fully
-              optimized 51 g arm because it lost too much torsional stiffness.</li>
-          <li>Designed the thermal-camera tilt mount: micro servo, U bracket, housing pod on 4 ball
-              dampers, and skids that double as landing gear.</li>
-          <li>Packaged and tested the files so they open cleanly on another PC and on an older
-              version of SolidWorks.</li>
-        </ul>
+           turning on a ball bearing. The camera module hangs from rubber ball dampers to reduce the
+           effect of propeller vibration on the images, and the camera lives inside a PC/ABS housing
+           that protects it from debris. To reduce mass, I did a topology study with 20 N per motor,
+           which showed max bending stress was around 24 MPa against a 276 MPa yield. With the results,
+           I redesigned the arms and cut arm mass from 102.4 g to 85.5 g each (68 g over 4 arms).</p>
+        <p>Result: My part of the project (this drone) received a grade of 100% (and became a poster
+           on my wall)</p>
       </div>
       <div class="proj-media">
         <figure class="wide">
@@ -112,17 +101,15 @@
   <!-- ============ LOCAL AI MODEL ============ -->
   <section class="proj" id="ai">
     <div class="proj-head">
-      <h2>Local AI Model</h2>
-      <span class="badge">Personal Project</span>
+      <h2>Local AI Model (Personal Project)</h2>
     </div>
     <div class="proj-meta">
-      <span><b>Role:</b> Personal Project</span>
       <span><b>Tools:</b> Ollama 3.2 · RAG · Python</span>
       <span><b>Timeline:</b> Jun 2026 – present</span>
     </div>
     <div class="proj-body proj-body-stack">
       <div class="text">
-        <p class="goal"><b>Goal:</b> Learn about AI and current use cases, and build a tool to help
+        <p><b>Goal:</b> Learn about AI and current use cases, and build a tool to help
            with thermodynamic questions (Thermodynamics 2 &amp; Rocket Team).</p>
         <p>After working on a local AI at Pratt and Whitney, I was curious and decided to try
            building one myself. So far, I have built a retrieval-augmented generation pipeline
@@ -147,17 +134,15 @@
   <!-- ============ THRUST ANALYSIS ============ -->
   <section class="proj" id="thrust">
     <div class="proj-head">
-      <h2>Thrust Analysis Tool</h2>
-      <span class="badge">McGill Rocket Team</span>
+      <h2>Thrust Analysis Tool (McGill Rocket Team)</h2>
     </div>
     <div class="proj-meta">
-      <span><b>Role:</b> Injector team lead</span>
       <span><b>Tools:</b> Python · Matplotlib · NumPy</span>
       <span><b>Timeline:</b> May 2026 – present</span>
     </div>
     <div class="proj-body proj-body-stack">
       <div class="text">
-        <p class="goal"><b>Goal:</b> A python pipeline that takes in hotfire test data and outputs
+        <p><b>Goal:</b> A python pipeline that takes in hotfire test data and outputs
            the coefficient of combustion efficiency.</p>
         <p>It takes in raw Hotfire data from our hybrid rocket engine and spits out the combustion
            efficiency (and some pretty graphs). The main difficulties revolved around making
@@ -193,17 +178,15 @@
   <!-- ============ AUTOMATIC CURTAINS ============ -->
   <section class="proj" id="curtains">
     <div class="proj-head">
-      <h2>Automatic Curtains</h2>
-      <span class="badge">Personal Project</span>
+      <h2>Automatic Curtains (Personal Project)</h2>
     </div>
     <div class="proj-meta">
-      <span><b>Role:</b> Personal Project</span>
       <span><b>Tools:</b> SolidWorks · Arduino UNO · 3D print</span>
       <span><b>Timeline:</b> Jun 2026 – Jul 2026</span>
     </div>
     <div class="proj-body proj-body-stack">
       <div class="text">
-        <p class="goal"><b>Goal:</b> I live next to a building whose lights, unfortunately for me,
+        <p><b>Goal:</b> I live next to a building whose lights, unfortunately for me,
            never turn off. That said, I like waking up to the sun without compromising my sleep.
            The goal was therefore to build curtains that open on a timer.</p>
         <p>Custom gear train and servo mount designed in SolidWorks. Powered and controlled by an
@@ -249,17 +232,15 @@
   <!-- ============ VORTEX INJECTOR ============ -->
   <section class="proj" id="injector">
     <div class="proj-head">
-      <h2>Vortex Injector Redesign</h2>
-      <span class="badge">McGill Rocket Team</span>
+      <h2>Vortex Injector Redesign (McGill Rocket Team)</h2>
     </div>
     <div class="proj-meta">
-      <span><b>Role:</b> Injector project (member &rarr; co-lead)</span>
       <span><b>Tools:</b> Siemens NX · GD&amp;T</span>
       <span><b>Timeline:</b> Aug 2025 – May 2026</span>
     </div>
     <div class="proj-body proj-body-stack">
       <div class="text">
-        <p class="goal"><b>Goal:</b> Update all versions of McGill Rocket Team's vortex injectors
+        <p><b>Goal:</b> Update all versions of McGill Rocket Team's vortex injectors
            to reflect the most recent research.</p>
         <p>I presented my research to the team, then redesigned both injectors in NX and produced
            new manufacturing drawings, including the full GD&amp;T, sections, and detail views needed
@@ -286,17 +267,15 @@
   <!-- ============ CHAIR ============ -->
   <section class="proj" id="chair">
     <div class="proj-head">
-      <h2>Chair with Assisted Seating &amp; Standing</h2>
-      <span class="badge">MECH 292</span>
+      <h2>Chair with Assisted Seating &amp; Standing (MECH 292)</h2>
     </div>
     <div class="proj-meta">
-      <span><b>Role:</b> CAD (solo) · circuit &amp; presentation (team of 5)</span>
       <span><b>Tools:</b> Siemens NX · Circuit</span>
       <span><b>Timeline:</b> Jan 2026 – May 2026</span>
     </div>
     <div class="proj-body proj-body-stack">
       <div class="text">
-        <p class="goal"><b>Goal:</b> Create a mechanistic product that improves people's lives.
+        <p><b>Goal:</b> Create a mechanistic product that improves people's lives.
            This was my first time using / learning CAD!</p>
         <p>Built for MECH 292, our design class, in a team of five. I CADed the entire assembly on
            my own, and the team designed and assembled a supporting circuit. We presented the
@@ -360,6 +339,23 @@ document.getElementById('yr').textContent = new Date().getFullYear();
     else { document.documentElement.setAttribute('data-theme','dark'); }
     try { localStorage.setItem('theme', dark ? 'light' : 'dark'); } catch(e){}
   });
+})();
+
+// Keep #section links (e.g. from the home page cards) on the right project
+// while images above it finish loading and push it down the page.
+(function () {
+  if (!location.hash) return;
+  var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (!target) return;
+  var userMoved = false;
+  ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) {
+    window.addEventListener(ev, function () { userMoved = true; }, { passive: true, once: true });
+  });
+  function align() { if (!userMoved) target.scrollIntoView({ behavior: 'instant', block: 'start' }); }
+  document.querySelectorAll('main img').forEach(function (img) {
+    if (!img.complete) img.addEventListener('load', align);
+  });
+  window.addEventListener('load', align);
 })();
 
 // Image lightbox / zoom
