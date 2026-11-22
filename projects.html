@@ -23,7 +23,7 @@
 
 <nav class="nav">
   <div class="nav-inner">
-    <div class="brand">NEEL&nbsp;VIEGAS <span class="tag">MECH ENG</span></div>
+    <div class="brand">Neel Viegas – U2 McGill Mechanical Engineering</div>
     <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
     <div class="nav-links" id="nl">
       <a href="index.html">Home</a>
@@ -142,34 +142,36 @@
     </div>
     <div class="proj-body proj-body-stack">
       <div class="text">
-        <p><b>Goal:</b> A python pipeline that takes in hotfire test data and outputs
-           the coefficient of combustion efficiency.</p>
+        <p><b>Goal:</b> A python pipeline that takes in hotfire test data and outputs the coefficient
+           of combustion efficiency.</p>
         <p>It takes in raw Hotfire data from our hybrid rocket engine and spits out the combustion
            efficiency (and some pretty graphs). The main difficulties revolved around making
-           assumptions to deal with faulty sensors, and deciding if I could trust the data.</p>
-        <ul class="tight">
-          <li>Results: c* efficiency avg = 85.3%</li>
-          <li>Used Python Matplot and NumPy to get to the final product</li>
-        </ul>
+           assumptions to deal with faulty sensors and deciding if I could trust the data. I used
+           Python Matplotlib and NumPy to get to the final product.</p>
+        <p>Results: c* efficiency avg = 78.2%</p>
       </div>
       <div class="thrust-grid">
         <figure class="tg-a">
-          <img src="media/Thrust%20Analysis/comb%20eff%20graph.png" alt="Combustion efficiency graph">
+          <img src="media/Thrust%20Analysis/Combustion%20Efficiency%202026.png" alt="Combustion efficiency over the hotfire, with a liquid blowdown average of 78.2% between 2 and 6 seconds">
           <figcaption>FIG 1: Combustion efficiency.</figcaption>
         </figure>
         <figure class="tg-b">
-          <img src="media/Thrust%20Analysis/mass%20flow%20rates.png" alt="Mass flow rates graph">
-          <figcaption>FIG 2: Mass flow rates &amp; regression rate.</figcaption>
+          <img src="media/Thrust%20Analysis/Mass%20Flow%20Rates%202026.png" alt="Oxidizer, fuel and total mass flow rates over the hotfire">
+          <figcaption>FIG 2: Mass flow rates.</figcaption>
         </figure>
         <figure class="tg-c">
           <img src="media/Other/Test%20Stand%20Hotfire%20pic.JPEG" alt="Hybrid rocket hotfire on the test stand">
           <figcaption>FIG 3: Test-stand hotfire.</figcaption>
         </figure>
+        <figure class="tg-e">
+          <img src="media/Thrust%20Analysis/Fuel%20Flow%20and%20Regression%202026.png" alt="Fuel mass flow rate and regression rate over the hotfire">
+          <figcaption>FIG 4: Fuel mass flow rate &amp; regression rate.</figcaption>
+        </figure>
         <figure class="tg-d">
           <video controls muted preload="none" playsinline class="hotfire-vid" poster="media/Thrust%20Analysis/hotfire_poster.jpg">
             <source src="media/Thrust%20Analysis/hotfire.mp4" type="video/mp4">
           </video>
-          <figcaption>FIG 4: Test-stand hotfire (video).</figcaption>
+          <figcaption>FIG 5: Test-stand hotfire (video).</figcaption>
         </figure>
       </div>
     </div>
@@ -186,17 +188,13 @@
     </div>
     <div class="proj-body proj-body-stack">
       <div class="text">
-        <p><b>Goal:</b> I live next to a building whose lights, unfortunately for me,
-           never turn off. That said, I like waking up to the sun without compromising my sleep.
-           The goal was therefore to build curtains that open on a timer.</p>
-        <p>Custom gear train and servo mount designed in SolidWorks. Powered and controlled by an
-           Arduino UNO that opens the curtains in the morning and closes them at night.</p>
-        <ul class="tight">
-          <li>Result: Fully assembled product.</li>
-          <li>Designed the drive gears and servo/electronics mounts in SolidWorks, then 3D printed them.</li>
-          <li>Built the circuit around an Arduino UNO with a timed open/close routine.</li>
-          <li>Iterated on the gear set until the torque and fit were right.</li>
-        </ul>
+        <p><b>Goal:</b> I live next to a building whose lights, unfortunately for me, never turn off.
+           That said, I like waking up to the sun without compromising my sleep. The goal was
+           therefore to build curtains that open on a timer.</p>
+        <p>I designed a custom gear train and servo mount in SolidWorks, then 3D printed them. I built
+           the circuit around an Arduino UNO with a timed open/close routine. I iterated on the gear set
+           until the torque and fit were right, then drilled the permanent solution into my wall.</p>
+        <p>Result: Fully assembled product &amp; better sleep</p>
       </div>
       <div class="proj-media">
         <div class="masonry">
@@ -240,16 +238,13 @@
     </div>
     <div class="proj-body proj-body-stack">
       <div class="text">
-        <p><b>Goal:</b> Update all versions of McGill Rocket Team's vortex injectors
-           to reflect the most recent research.</p>
-        <p>I presented my research to the team, then redesigned both injectors in NX and produced
-           new manufacturing drawings, including the full GD&amp;T, sections, and detail views needed
-           to actually make the parts.</p>
-        <ul class="tight">
-          <li>Researched and justified the ~45° hole-angle change against prior geometry.</li>
-          <li>Rebuilt the bench-scale and full-scale injector CAD in Siemens NX.</li>
-          <li>Authored new drawings with tolerances, seal callouts, and detail scales.</li>
-        </ul>
+        <p><b>Goal:</b> Update all versions of McGill Rocket Team's vortex injectors to reflect the most
+           recent research.</p>
+        <p>New research showed that a ~45° hole angle resulted in better combustion stability and
+           regression. I presented and justified my research to the team, then redesigned both injectors
+           in Siemens NX and produced new manufacturing drawings, including the full GD&amp;T, sections,
+           and detail views needed to machine the parts.</p>
+        <p>Result: Authored new drawings with tolerances, seal callouts, and detail scales</p>
       </div>
       <div class="proj-media">
         <figure class="wide">
@@ -275,16 +270,12 @@
     </div>
     <div class="proj-body proj-body-stack">
       <div class="text">
-        <p><b>Goal:</b> Create a mechanistic product that improves people's lives.
-           This was my first time using / learning CAD!</p>
-        <p>Built for MECH 292, our design class, in a team of five. I CADed the entire assembly on
-           my own, and the team designed and assembled a supporting circuit. We presented the
-           project to the class and answered design questions.</p>
-        <ul class="tight">
-          <li>Modelled the full chair assembly in Siemens NX (solo).</li>
-          <li>Contributed to the assist-mechanism circuit (team).</li>
-          <li>Presented and defended the design to the class and earned an A (team).</li>
-        </ul>
+        <p><b>Goal:</b> Create a mechanistic product that improves people's lives. This was my first
+           time using / learning CAD!</p>
+        <p>Built for MECH 292, our design class, in a team of five. I CADed the entire assembly in
+           Siemens NX on my own, and the team designed and assembled a supporting circuit. We presented
+           the project to the class and answered design questions.</p>
+        <p>Result: Our team earned an A in the project</p>
       </div>
       <div class="chair-grid">
         <figure class="cg-render">
